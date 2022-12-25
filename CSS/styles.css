@@ -1,0 +1,580 @@
+/* ----------------------------------------------  FUENTES  -------------------------------------------- */
+
+@font-face {
+    font-family: 'SFmono';
+    src: url(./fuentes/sf-mono/SFMono-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'firamono';
+    src: url(./fuentes/Fira_Mono/FiraMono-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'firacode';
+    src: url(./fuentes/fira-code/FiraCode-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'calibre';
+    src: url(./fuentes/Calibre/Calibre-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url(./fuentes/Inter/Inter-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sanFrancisco';
+    src: url(./fuentes/San-Francisco/SFNSText-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'calibre-bold';
+    src: url(./fuentes/Calibre/Calibre-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'inter-bold';
+    src: url(./fuentes/Inter/Inter-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sanFrancisco-bold';
+    src: url(./fuentes/San-Francisco/SFNSDisplay-Bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/* VARIABLES */
+
+body {
+    --font-mono: 'SFmono', 'firamono', 'firacode';
+    --font-sans: 'calibre', 'inter', 'sanFrancisco';
+    --font-sans-bold: 'calibre-bold', 'inter-bold', 'sanFrancisco-bold';
+}
+
+/* ESTILOS GENERALES */
+
+* {
+    background: #0a192f;
+}
+
+body {
+    background-color: #0a192f !important;
+    overflow-x: hidden !important;
+}
+
+#cuerpo {
+    padding-left: 80px;
+}
+
+#contenido {
+    margin: 0px auto;
+}
+
+/* ----------------------------------------  ESTILOS BARRA DE NAVEGACION  ------------------------------ */
+
+.barranav {
+    height: 110px;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #09192f !important;
+}
+
+.logo{
+    display: block;
+    width: 50px;
+    margin-left: 10px;
+}
+
+#navbarNav ul li a {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    background: transparent;
+}
+
+#navbarNav ul li a span {
+    color: #64ffda;
+}
+
+
+.boton {
+    width: 15%;
+    border-color: #64ffda !important;
+    margin-left: 15px;
+    height: 40px;
+}
+
+.boton a{
+    text-decoration: none;
+    color: #64ffda !important;
+    background-color: transparent;
+}
+
+#navbarNav ul li a:hover, li a.activo {
+    color: #64ffda !important;
+}
+
+#menu {
+    text-align: end;
+}
+
+/* --------------------------------------------  MENU HAMBURGUESA  ----------------------------------- */
+
+.hamburguesa {
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: .65rem;
+}
+
+.hamburguesa>div {
+    background: #64ffda;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+.hamburguesa div:first-child {
+    width: 100%;
+}
+
+.hamburguesa div:nth-child(2) {
+    width: 80%;
+    margin-left: 20%;
+}
+
+.hamburguesa div:last-child {
+    width: 50%;
+    margin-left: 50%;
+}
+
+.cerrar{
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: .65rem;
+}
+
+.cerrar>div{
+    background: #64ffda;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+.cerrar div:first-child {
+    transform: rotate(40deg);
+}
+
+.cerrar div:nth-child(2) {
+    opacity: 0;
+}
+
+.cerrar div:last-child {
+    transform: rotate(-40deg);
+}
+
+/* ------------------------------------------------  ESTILO OFFCANVAS  --------------------------------------- */
+
+.offcanvas-backdrop.show {
+    opacity: 0 !important;
+}
+
+/* --------------------------------------------  ESTILO SECCION INICIO  ----------------------------------- */
+
+.inicio {
+    margin-bottom: 360px;
+}
+
+.hola {
+    font-family: var(--font-mono);
+    color: #64ffda;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.nombre {
+    font-family: var(--font-sans-bold);
+    color: #ccd6f6;
+    font-size: 4.7rem;
+    height: 80px;
+}
+
+.subtitulo {
+    font-family: var(--font-sans-bold);
+    color: #6e7a97;
+    font-size: 4.7rem;
+}
+
+.intro {
+    font-size: 1.2rem;
+    font-family: var(--font-sans);
+    color: #6e7a97;
+    margin-bottom: .1rem;
+}
+
+/* -------------------------------------------  ESTILO SECCION SOBRE MI  -------------------------------- */
+
+.subtitulo-pestana {
+    font-family: var(--font-mono);
+    color: #ccd6f6;
+    padding-right: 0px !important;
+    width: 20.333% !important;
+    margin-bottom: 80px;
+}
+
+.subtitulo-pestana span {
+    color: #64ffda;
+}
+
+.linea {
+    background: #233554;
+    height: 1px;
+    border: 0;
+    line-height: 30px;
+    margin-top: 18px !important;
+    margin-left: 15px;
+}
+
+.sobreMi article p {
+    font-size: 1.2rem;
+    font-family: var(--font-sans);
+    color: #6e7a97;
+    text-align: justify;
+}
+
+.sobreMi article .lista p{
+    font-size: .8rem;
+    font-family: var(--font-mono);
+    color: #8892b0;
+    list-style: none;
+    margin-top: 19px;
+}
+
+#list1{
+    padding-top: 3px;
+}
+
+.icon{
+    float: left;
+    margin-right: 7px;
+    color: #64ffda;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.lista .icon{
+    float: left;
+    margin-right: 7px;
+    color: #64ffda;
+    font-size: 13px;
+    margin-top: 5px;
+    transform: none !important;
+}
+
+#foto-perfil{
+    margin-left: 60px;
+    width: 280px;
+    position: absolute;
+    top: 90px;
+}
+
+.marco{
+    width: 69%;
+    height: 102%;
+    background-color: transparent;
+    border: 5px solid #64ffda;
+    margin-left: 90px;
+    margin-top: 8px;
+}
+
+
+/* -------------------------------------------  ESTILO SECCION PROYECTOS -----------------------------------*/
+
+.proyectos{
+    margin-top: 280px !important;
+}
+
+.proyecto1{
+    padding: 0px !important;
+}
+
+.imagen-proyecto{
+    z-index: 1;
+}
+
+.filtro{
+    filter: invert(12%) sepia(100%) saturate(485%) hue-rotate(165deg) brightness(90%) contrast(70%);
+    transition: 400ms;
+}
+
+.filtro:hover{
+    filter: none;
+}
+
+.info-proyecto{
+    align-items: flex-end;
+}
+
+.titulo-proyecto a{
+    font-family: var(--font-sans-bold);
+    color: #ccd6f6;
+    font-size: 35px;
+    width: 130px;
+    margin-left: 65%;
+}
+
+.titulo-proyecto a:hover{
+    color: #64ffda;
+}
+
+.info-proyecto p {
+    width: 550px;
+    position: absolute;
+    background-color: #112240;
+    border-radius: 2px;
+    padding: 20px;
+    padding-left: 20px;
+    text-align: end;
+    right: 12%;
+}
+
+.info-proyecto p a{
+    color: #a8b2d1;
+    text-decoration: none;
+    background: transparent;
+}
+
+.info-proyecto p span{
+    background-color: #112240;
+    color: #64ffda;
+}
+
+.proyectos article{
+    margin-bottom: 180px;
+}
+
+.info-proyecto2 p {
+    position: absolute;
+    width: 580px;
+    background-color: #112240;
+    border-radius: 2px;
+    color: #a8b2d1;
+    padding: 20px;
+    padding-left: 20px;
+    z-index: 2;
+}
+
+.info-proyecto2 p span{
+    background-color: #112240;
+    color: #64ffda;
+}
+
+.info-proyecto2 .titulo-proyecto{
+    margin-left: 0;
+}
+
+.titulo-proyecto2 a{
+    font-family: var(--font-sans-bold);
+    color: #ccd6f6;
+    font-size: 35px;
+    width: 290px;
+}
+
+.titulo-proyecto2 a:hover{
+    color: #64ffda;
+}
+
+#carrito a{
+    width: 275px;
+    margin-left: 30%;
+}
+
+#buscador .info-proyecto2 h4 a{
+    width: 130px;
+}
+
+#buscador .info-proyecto2 p{
+    width: 580px;
+}
+
+/* ------------------------------------------  SECCION DE CONTACTO  ------------------------------------ */
+
+.contacto{
+    margin-top: 50px !important;
+}
+
+h6{
+    font-family: var(--font-mono);
+    color: #64ffda;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.contacto h2{
+    color: #ccd6f6;
+    font-family: var(--font-sans-bold);
+    margin: 0px auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+.contacto p{
+    font-family: var(--font-sans);
+    text-align: center;
+    max-width: 600px;
+    margin: 0px auto;
+    margin-top: 20px;
+    color: #6e7a97;
+    font-size: 20px;
+}
+
+.contacto .boton{
+    width: 120px;
+    margin-top: 80px;
+    margin-left: 45.5%;
+    text-align: center;
+    font-size: 17px;
+    padding: 5px;
+    height: 60px;
+    color: #64ffda;
+}
+
+
+/* -------------------------------------  SECCION PIE DE PAGINA VACIA  ----------------------------------- */
+
+footer div{
+    padding-top: 8rem;
+    height: 10px;
+    margin-top: 50px;
+}
+
+footer div p{
+    font-family: var(--font-mono);
+    color: #6e7a97;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+/* -----------------------------------  SECCION LATERAL REDES SOCIALES --------------------------------------*/
+
+
+.redes-sociales{
+    display: block;
+    position: fixed;
+    bottom: 5%;
+    left: 4%;
+    width: 20px;
+    height: 445px;
+    background: transparent;
+}
+
+.icon{
+    color: #a8b2d1;
+    font-size: 22px;
+    margin-bottom: 20px;
+    transition: all 200ms ease-in-out;
+}
+
+.icon:hover{
+    color: #64ffda;
+    transform: translateY(-20%);
+}
+
+.linea-vertical{
+    display: flex;
+    height: 90px;
+    width: 1px;
+    background: #a8b2d1;
+}
+
+.redes-sociales .linea-vertical{
+    margin-left: 9px;
+}
+
+.correo{
+    display: block;
+    position: fixed;
+    bottom: 4%;
+    right: -3%;
+    height: 580px;
+    width: 24px;
+    background: transparent;
+}
+
+.correoText{
+    font-family: var(--font-mono);
+    transform: rotate(90deg);
+    height: 24px;
+    background: transparent;
+}
+
+.correoText a{
+    display: flex;
+    background: transparent;
+    text-decoration: none;
+    color: #a8b2d1;
+    font-size: 13px;
+    transition: all 200ms ease-in-out;
+}
+
+.correoText a:hover{
+    color: #64ffda;
+    transform: translateX(-20%);
+}
+
+.correoText .linea-vertical{
+    position: fixed;
+    transform: rotate(90deg);
+    bottom: -58%;
+    left: 1330%;
+}
+
+
+/*------------------------------------------------ CLASES EN ANIMACIONES -------------------------------------*/
+
+
+.elemento2, .elemento3, .elemento4, .elemento5, .elemento6{
+    opacity: 0;
+}
+
+
+
+
+
